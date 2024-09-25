@@ -1,0 +1,244 @@
+﻿@/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: 
+   Date:   
+   
+   Filename: lake_styles.css
+
+*/
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'zitione';
+  src: url('cac_champagne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+   font-family: 'huati';
+   src: url('DobkinPlain.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+
+
+body {
+  background-color: #000000; /* 深色背景 */
+  color: white; /* 白色文字 */
+  margin: 0;
+  padding: 0;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   width: 100%;
+      border-left: calc(3vw) solid #CBCC8A;
+      border-right: calc(3vw) solid #CBCC8A;
+
+}
+
+header {
+  background-color: #784A78;
+  padding: 1px 0;
+  width :100%;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+ nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   text-align:center
+ }
+ 
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+
+#colume {
+   display: flex;
+   flex-direction: row; /* 设置为水平布局 */
+   justify-content: space-between; /* 添加空间 */
+   height: 100vh; /* 设置容器高度为视口高度 */
+}
+
+#leftcol {
+   float: left;
+   width: 70%; /* 设置主内容区域的宽度 */
+   background-color: #000000; /* 主内容区域的背景色 */
+   padding: 0px; /* 主内容区域的内边距 */
+}
+
+
+#rightcol {
+   float: right;
+   width: 30%; /* 设置侧边栏的宽度 */
+   background-color: #582D5A; /* 侧边栏的背景色 */
+   color: white; /* 侧边栏的文字颜色 */
+   padding: 0; /* 侧边栏的内边距 */
+ }
+
+
+ /* 清除浮动 */
+.clearfix::after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ /* 应用清除浮动到需要清除浮动的容器 */
+.clearfix {
+   zoom: 1; /* 确保清除浮动在IE中有效 */
+ }
+
+ #leftcol h1 {
+   font-family: "huati";
+   padding:10px; 
+   color: #ffffff; /* 标题颜色，根据需要调整 */
+   font-size: 1cm; /* 标题大小，根据需要调整 */
+ }
+
+ /* 在lake_styles.css中 */
+#leftcol img {
+   width: 100%; /* 设置图片宽度与父容器宽度相同 */
+   height: auto; /* 保持图片原始高度 */
+ }
+
+#maincontent {
+   font-size: 15px; /* 设置字体大小 */
+   line-height: 1.6; /* 设置行间距 */
+   flex: 1; /* 占据剩余空间 */
+   padding: 20px;
+ }
+
+ #aside {
+   display: flex;
+   flex-direction: row; /* 设置为水平布局 */
+   justify-content: space-between; /* 添加空间 */
+}
+
+#aside1 {
+   float: left;
+   width: 40%; /* 设置主内容区域的宽度 */
+   background-color: #E3A28E; /* 主内容区域的背景色 */
+   color:#ffffff;
+   padding: 5px; /* 主内容区域的内边距 */
+   margin-left: 25px; /* 设置aside离左边缘的距离 */
+   margin-bottom: 20px; /* 设置aside离左边缘的距离 */
+   line-height: 1.6; 
+}
+
+#aside h2{
+   text-align: center;
+}
+
+#aside2 {
+   float: right;
+   width: 40%; /* 设置侧边栏的宽度 */
+   background-color: #D1BB72; /* 侧边栏的背景色 */
+   color: white; /* 侧边栏的文字颜色 */
+   padding: 5px; /* 侧边栏的内边距 */
+   margin-right: 25px; /* 设置aside离左边缘的距离 */
+   margin-bottom: 20px; /* 设置aside离左边缘的距离 */
+ }
+
+ #aside2 h4{
+   margin-left: px; /* 设置aside离左边缘的距离 */
+ }
+ #aside2 p{
+   margin-left: 10px; /* 设置aside离左边缘的距离 */
+ }
+
+  /* 清除浮动 */
+.clearfix::after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ /* 应用清除浮动到需要清除浮动的容器 */
+.clearfix {
+   zoom: 1; /* 确保清除浮动在IE中有效 */
+ }
+ 
+ /* 右侧栏标题样式 */
+ #rightcol h2 {
+   font-family: "huati";
+   padding:0px; /* 移除内边距 */
+   color: #ffffff; /* 标题颜色，根据需要调整 */
+   font-size: 2em; /* 标题大小，根据需要调整 */
+   margin-top: 50px;
+   margin-bottom: 0;
+   margin-left: 20px;
+ }
+ 
+ /* 右侧栏列表样式 */
+ #rightcol ul {
+   display: block;
+   list-style-type: none; /* 移除默认列表样式 */
+   padding: 0; /* 移除内边距 */
+   margin-top: 10px;
+ }
+ 
+ /* 右侧栏列表项样式 */
+ #rightcol li {
+   display: block;
+   text-align:left;
+   padding:0px,10px; /* 添加垂直间距 */
+ }
+ 
+ /* 右侧栏链接样式 */
+ #rightcol a {
+   text-decoration: none; /* 移除下划线 */
+   color: #856B8A; /* 链接颜色为白色 */
+   display: block; /* 使链接充满整个列表项 */
+ }
+
+
+ #testimonial {
+   font-family:"Times New Roman", Times, serif;;
+   padding: 20px; /* 移除内边距 */
+   color: #C188C4; /* 链接颜色为白色 */
+   line-height: 1.6; 
+   font-size:1.2em;
+
+ }
+
+
+ /* 其他样式... */
+ 
+
+footer {
+  clear: both;
+  background-color: #4D464E;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
